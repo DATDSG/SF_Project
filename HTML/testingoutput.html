@@ -15,6 +15,7 @@
     </tr>
   </thead>
   <tbody>
+    {% for i in range(data["image_name"]|length) %}
   <tr>
     <td><img src="{{ data["image_name"][i] }}" style="height: 200px; width: 200px"></td>
 
@@ -23,11 +24,9 @@
         <br><br>
         <strong>Class :</strong>{{ data["Labels"][i] }}
     </td>
-    <td>
-        
-    </td>
-    </tr>
-  
+
+  </tr>
+    {% endfor %}
   </tbody>
 </table>
 <br>
